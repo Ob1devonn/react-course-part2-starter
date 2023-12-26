@@ -1,7 +1,7 @@
 import "./App.css";
-import AuthProvider from "./state-management/auth/AuthProvider";
 import HomePage from "./state-management/HomePage";
 import NavBar from "./state-management/NavBar";
+import Counter from "./state-management/counter/Counter";
 import TasksProvider from "./state-management/tasks/TasksProvider";
 
 function App() {
@@ -9,12 +9,11 @@ function App() {
 
   return (
     <>
-      <AuthProvider>
-        <TasksProvider>
-          <NavBar />
-          <HomePage />
-        </TasksProvider>
-      </AuthProvider>
+      <TasksProvider>
+        <Counter />
+        <NavBar />
+        <HomePage />
+      </TasksProvider>
     </>
   );
 }

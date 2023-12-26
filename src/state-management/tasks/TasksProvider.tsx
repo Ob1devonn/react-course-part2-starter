@@ -35,7 +35,9 @@ function TasksProvider({ children }: Props) {
   const [tasks, dispatch] = useReducer(taskReducer, []);
 
   return (
-    <TasksContext.Provider value={{ tasks, dispatch }}></TasksContext.Provider>
+    <TasksContext.Provider value={{ tasks, dispatch }}>
+      {children}
+    </TasksContext.Provider>
   );
 }
 
